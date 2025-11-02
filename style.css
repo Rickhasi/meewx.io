@@ -1,0 +1,125 @@
+
+/* Neon classic theme */
+:root{
+  --bg:#03060a;
+  --neon:#34f0ff;
+  --accent:#7df7ff;
+  --glass: rgba(255,255,255,0.03);
+  --text:#cfeef6;
+  --shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body,#root{height:100%}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background: radial-gradient(ellipse at bottom, rgba(3,6,10,1) 0%, rgba(2,4,6,1) 60%), var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height:100vh;
+}
+
+/* Hero */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  text-align:center;
+  padding:40px 20px;
+}
+
+.hero .overlay{
+  position:absolute;
+  inset:0;
+  background: url('assets/MEEWX.png') center/cover no-repeat;
+  filter: blur(10px) grayscale(30%) brightness(30%);
+  transform:scale(1.05);
+  opacity:0.35;
+  z-index:0;
+}
+
+/* content card */
+.content{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+  width:100%;
+  backdrop-filter: blur(6px) saturate(120%);
+  padding:30px;
+  border-radius:14px;
+  box-shadow: var(--shadow);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.hero-image{
+  max-width:260px;
+  width:40%;
+  border-radius:16px;
+  margin:0 auto 18px;
+  display:block;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Neon heading */
+.neon{
+  font-size:44px;
+  letter-spacing:1px;
+  color:var(--neon);
+  text-shadow:
+    0 0 6px rgba(52,240,255,0.8),
+    0 0 20px rgba(52,240,255,0.6),
+    0 10px 30px rgba(0,0,0,0.7);
+  margin-bottom:8px;
+  font-weight:700;
+}
+
+/* lead */
+.lead{
+  color:var(--accent);
+  margin-bottom:18px;
+  font-size:18px;
+}
+
+/* button */
+.btn{
+  display:inline-block;
+  padding:12px 20px;
+  background: linear-gradient(90deg, rgba(52,240,255,0.12), rgba(125,247,255,0.06));
+  border:1px solid rgba(52,240,255,0.2);
+  color:var(--neon);
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:600;
+  box-shadow: 0 6px 30px rgba(52,240,255,0.06);
+}
+
+/* loader visible on top */
+.loader{
+  position:fixed;
+  left:50%;
+  top:8%;
+  transform:translateX(-50%);
+  background: rgba(3,6,10,0.85);
+  padding:12px 18px;
+  border-radius:999px;
+  color:var(--neon);
+  border:1px solid rgba(52,240,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  font-weight:700;
+  letter-spacing:1px;
+  z-index:999;
+}
+
+.hidden{display:none}
+
+/* responsive */
+@media(max-width:600px){
+  .neon{font-size:28px}
+  .hero-image{width:60%;max-width:220px}
+}

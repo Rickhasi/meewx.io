@@ -1,0 +1,25 @@
+
+STEP-BY-STEP: Upload to GitHub and enable Pages (for beginners)
+===============================================================
+
+1) Create a GitHub account at https://github.com if you don't have one.
+2) Sign in and click the + (top-right) -> New repository.
+   - Repository name: meewx.io
+   - Description: MeewX landing page
+   - Public: select Public (required for free GitHub Pages)
+   - Add README: optional
+   - Click Create repository.
+3) On the new repo page, click 'Upload files' (green button).
+4) Drag & drop the files from this ZIP (index.html, style.css, script.js, assets folder).
+   - Important: upload files at the root of the repository (not inside another parent folder).
+5) Commit changes by clicking 'Commit changes' at the bottom.
+6) Go to Settings -> Pages (left sidebar). Under 'Build and deployment' or 'Source', set:
+   - Branch: main (or master)
+   - Folder: / (root)
+   - Save.
+7) Wait 1-2 minutes, then visit: https://<your-github-username>.github.io/meewx.io/
+8) To use a custom domain 'www.meewx.io':
+   - In your domain provider, create a CNAME record for 'www' pointing to '<your-github-username>.github.io'.
+   - In GitHub repo Settings -> Pages -> Custom domain, enter 'www.meewx.io' and save.
+   - GitHub will ask you to add DNS records shown; follow the instructions from GitHub and your domain provider.
+9) Keep the repository private to management (do not add collaborators) — but note GitHub Pages free hosting needs public repo for default behavior.
